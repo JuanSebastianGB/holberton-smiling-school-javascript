@@ -1,0 +1,249 @@
+:root {
+    --color-purple      : #c273fc;
+    --color-purple-light: #cb8bf9;
+    --color-white       : #f4f1f1;
+    --color-black       : #071629;
+    --color-green       : #82D24F;
+    --color-gray        : #979797;
+
+
+    --main-color      : var(--color-white);
+    --secondary-color : var(--color-purple);
+    --arrow-color     : var(--color-black);
+    --check-icon-green: var(--color-green);
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header {
+    background     : url('./images/pic_2.jpg') top center no-repeat;
+    background-size: cover;
+}
+
+.smile-off {
+    background     : url('./images/smile_off.png') center no-repeat;
+    background-size: cover;
+    width          : 37px;
+    height         : 30px;
+    display        : blocK;
+}
+
+.smile-on {
+    background     : url('./images/smile_on.png') center no-repeat;
+    background-size: cover;
+    width          : 37px;
+    height         : 30px;
+    display        : inline;
+}
+
+
+.text-purple {
+    color: var(--secondary-color);
+}
+
+.text-responsive {
+    font-size: 10vw;
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+.font-size-14 {
+    font-size: 14px;
+}
+
+.font-size-18 {
+    font-size: 18px;
+}
+
+.font-size-32 {
+    font-size: 2rem;
+}
+
+.font-size-44 {
+    font-size: 44px;
+}
+
+.font-size-60 {
+    font-size: 60px;
+}
+
+.contract-spacing {
+    letter-spacing: -.1rem;
+}
+
+.color-button-purple {
+    background-color: var(--secondary-color);
+    box-shadow      : 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bg-purple {
+    background: var(--secondary-color);
+}
+
+
+[class*='holberton_school-icon-arrow'] {
+    font-size  : 6rem;
+    font-weight: 400;
+    color      : var(--arrow-color);
+}
+
+.quote-section [class*='holberton_school-icon-arrow'] {
+    color: var(--main-color);
+}
+
+.video-card-control {
+    width : 255px;
+    height: 355px;
+}
+
+.play-icon-position {
+    margin-top : -7rem;
+    margin-left: 5.5rem;
+}
+
+.free-membership {
+    background: var(--color-black);
+    color     : var(--main-color);
+}
+
+.cad-membership__logo {
+    height: 36px;
+    width : 45px;
+}
+
+footer {
+    background: var(--color-black);
+}
+
+.footer__rights {
+    opacity: .4;
+}
+
+footer [class*='holberton_school-icon-ic_'] {
+    color    : white;
+    width    : 30px;
+    height   : 30px;
+    font-size: 2rem;
+}
+
+
+/** Custom classes for price **/
+
+.header-price {
+    background     : url('./images/pic_2.jpg') top center no-repeat;
+    background-size: cover;
+}
+
+[class*='holberton_school-icon-check'] {
+    color    : var(--check-icon-green);
+    font-size: 30px;
+}
+
+.hr-gray {
+    margin-top   : 2rem;
+    margin-bottom: 2rem;
+    border       : 0;
+    border-top   : 1px solid var(--color-gray);
+}
+
+/** Custom classes for courses **/
+
+.header-course {
+    background     : url('./images/pic_3.jpg') top center no-repeat;
+    background-size: cover;
+}
+
+.font-family-coiny {
+    font-family: coiny;
+}
+
+.header-course .nav-item:hover a {
+    color: var(--secondary-color) !important;
+}
+
+.header-course .underline {
+    position: relative;
+}
+
+.header-course .underline:hover:after {
+    content         : '';
+    position        : absolute;
+    background-color: white;
+    display         : block;
+    margin          : 10px auto 0;
+    height          : 2px;
+    width           : 80%;
+    border-radius   : 3px;
+    opacity         : 0.5;
+}
+
+/** Custom classes for icon search **/
+
+.icon-search {
+    font-size       : 25px;
+    background-color: var(--color-purple-light);
+    margin          : 10px 0 0 10px;
+    padding-right   : 5px;
+}
+
+.filter-section .input-group {
+    background-color: var(--color-purple-light);
+    height          : 50px;
+}
+
+.filter-section .input-group input {
+    background: transparent;
+    color     : var(--main-color);
+    margin-top: 5px;
+}
+
+
+.filter-section input::placeholder,
+.filter-section .dropdown {
+    color    : var(--main-color);
+    font-size: 23px;
+}
+
+.filter-section .dropdown {
+    width : 100%;
+    height: 30px;
+    border: none;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.dropdown-spacing {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    padding        : 0.5rem;
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+    padding-bottom: 6px;
+}
+
+.dropdown .dropdown-menu {
+    background-color: white;
+    opacity         : 2;
+}
+
+.dropdown-item:hover {
+    color: var(--secondary-color);
+}
+
+/** Custom classes for results section **/
+
+.results-section .card {
+    padding: 1.2rem;
+    border : none;
+}
