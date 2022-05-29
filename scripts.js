@@ -1,11 +1,11 @@
-import { API_URL } from './config/index.js';
+import { API_URL_QUOTES } from './config/index.js';
 import { CarouselItem } from './custom-components/CarouselItem.js';
 import { Loader } from './custom-components/loader/Loader.js';
 import { QuoteSection } from './custom-components/QuoteSection.js';
 
 const setQuotes = async () => {
   try {
-    let fetchQuotes = await $.get(API_URL);
+    let fetchQuotes = await $.get(API_URL_QUOTES);
     let counter = 0;
     let classActive = '';
     $('body').append(Loader);
