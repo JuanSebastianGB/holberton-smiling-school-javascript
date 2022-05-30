@@ -2,6 +2,7 @@ import { ajax } from '../helpers/ajax.js';
 import { CarouselArrow } from './CarouselArrow.js';
 import { Quote } from './Quote.js';
 import api from '../helpers/connection_api.js';
+import { Loader } from './Loader.js';
 
 export const QuotesSection = async () => {
   const $quotesSection = document.createElement('section'),
@@ -26,12 +27,13 @@ export const QuotesSection = async () => {
     url: api.API_URL_QUOTES,
     cbSuccess: (quotes) => {
       let totalQuotes = quotes.length;
-      console.log(quotes);
+
       quotes.map((quote, key) => {
         if (key + 1 <= parseInt(totalQuotes / 2))
           $carouselInner.appendChild(Quote({ active: true, ...quote }));
         else $carouselInner.appendChild(Quote({ active: false, ...quote }));
       });
+      document.querySelector('.loader-container').style.display = 'none';
     },
   });
 

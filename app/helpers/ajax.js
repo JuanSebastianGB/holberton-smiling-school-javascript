@@ -7,6 +7,6 @@ export const ajax = async (props) => {
     .then((json) => cbSuccess(json))
     .catch((err) => {
       let message = err.statusText || 'Error accessing to required API';
-      console.error(message);
+      console.log(message);
     });
 };
