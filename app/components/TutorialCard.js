@@ -1,6 +1,15 @@
+import { Starts } from './Starts.js';
+
 export const TutorialCard = (props) => {
-  const { title, duration, author_pic_url, thumb_url, sub_title, author } =
-    props;
+  const {
+    title,
+    duration,
+    author_pic_url,
+    thumb_url,
+    sub_title,
+    author,
+    star,
+  } = props;
   return `
 <div class="mx-1">
     <div class="card video-card-control mx-auto my-3">
@@ -22,16 +31,7 @@ export const TutorialCard = (props) => {
             </div>
             <div class="row justify-content-between mt-2">
                 <div class="col">
-                    <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                        loading="lazy">
-                    <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                        loading="lazy">
-                    <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                        loading="lazy">
-                    <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                        loading="lazy">
-                    <img src="images/star_off.png" width="15" height="15" alt="Star off"
-                        loading="lazy">
+                  ${Starts({ star })}
                 </div>
                 <div class="col-4 text-right text-purple">
                     ${duration}
