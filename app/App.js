@@ -1,6 +1,8 @@
 import { Header } from './components/Header.js';
+import { QuotesSection } from './components/QuotesSection.js';
 
-export const App = () => {
+export const App = async () => {
   const $root = document.getElementById('root');
   $root.appendChild(Header());
+  $root.appendChild(await QuotesSection());
 };
