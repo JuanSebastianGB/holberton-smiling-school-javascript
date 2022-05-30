@@ -1,4 +1,5 @@
-export const SearchSection = () => {
+export const SearchSection = (props) => {
+  const { queryInputId } = props;
   const $search = document.createElement('section'),
     $root = document.getElementById('root');
   $root.appendChild($search);
@@ -14,7 +15,7 @@ export const SearchSection = () => {
                   </span>
                   <input type="text"
                       class="form-control border-top-0 lightpurple-bg text-white border-0 search-form"
-                      id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search by keywords">
+                      id="${queryInputId}" aria-describedby="emailHelp" placeholder="Search by keywords">
               </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
