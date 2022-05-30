@@ -1,3 +1,4 @@
+import { Footer } from './components/Footer.js';
 import { Header } from './components/Header.js';
 import { MembershipSection } from './components/MembershipSection.js';
 import { QuotesSectionWithLoader } from './components/QuotesSectionWithLoader.js';
@@ -21,4 +22,5 @@ export const App = async () => {
     url: api.API_URL_TUTORIALS_LATEST,
     customTitle: TitleLatestVideos(),
   });
+  Footer();
 };
