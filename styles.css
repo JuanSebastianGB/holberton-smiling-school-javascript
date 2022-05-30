@@ -255,6 +255,5 @@ button:not(:disabled) {
 }
 
 .loader-container {
-    background: var(--color-purple);
-    padding   : 2.5rem 0;
+    padding: 2.5rem 0;
 }
