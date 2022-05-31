@@ -35,11 +35,11 @@ export const TutorialVideosSection = async (props) => {
             </div>
         </div>
         <a class="carousel-control-prev" href="#${videoControlId}" role="button" data-slide="prev">
-            <span class="holberton_school-icon-arrow_4 arrow-black" aria-hidden="true"></span>
+            <span class="holberton_school-icon-arrow_4 arrow-black" aria-hidden="true" id="arrow-prev-${videoControlId}"></span>
             <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#${videoControlId}" role="button" data-slide="next">
-            <span class="holberton_school-icon-arrow_3 arrow-black" aria-hidden="true"></span>
+            <span class="holberton_school-icon-arrow_3 arrow-black" aria-hidden="true" id="arrow-next-${videoControlId}"></span>
             <span class="sr-only">Next</span>
         </a>
     </div>

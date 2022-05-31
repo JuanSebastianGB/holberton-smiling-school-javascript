@@ -1,4 +1,4 @@
-import loads from '../helpers/LoagPage.js';
+import loads from '../helpers/LoadPage.js';
 
 export const Router = async () => {
   let { hash } = location;

@@ -29,6 +29,7 @@ const LoadHome = async () => {
     customTitle: TitleLatestVideos(),
   });
   Footer();
+  events.handleClickArrow();
 };
 
 const LoadCourses = async () => {

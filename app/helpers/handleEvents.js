@@ -55,8 +55,24 @@ const handleChangeSort = (props) => {
   });
 };
 
+const handleClickArrow = () => {
+  const $arrowsLeft = document.querySelectorAll(
+    '.holberton_school-icon-arrow_4'
+  );
+  $arrowsLeft.forEach((arrow) => {
+    arrow.addEventListener('click', (e) => console.log('working l'));
+  });
+  const $arrowsRight = document.querySelectorAll(
+    '.holberton_school-icon-arrow_3'
+  );
+  $arrowsRight.forEach((arrow) => {
+    arrow.addEventListener('click', (e) => console.log('working r'));
+  });
+};
+
 export default {
   handleKeyUp,
   handleChangeTopic,
   handleChangeSort,
+  handleClickArrow,
 };
