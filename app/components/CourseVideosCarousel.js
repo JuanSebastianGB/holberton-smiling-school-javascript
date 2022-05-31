@@ -21,7 +21,6 @@ export const CourseVideosCarousel = async (props) => {
     };
     let { courses } = await $.ajax({ url: api.API_URL_COURSES, data }),
       response = await $.ajax({ url: api.API_URL_COURSES, data });
-    console.log(response);
     $results.innerHTML = `
       <div class="container py-5">
           <div class="container text-black-50">${courses.length} videos</div>

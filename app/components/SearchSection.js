@@ -23,11 +23,11 @@ export const SearchSection = (props) => {
               <div class="input-group border-bottom">
                   <div class="dropdown">
                       <div class="rounded-top text-white border-bottom dropdown-toggle dropdown-spacing"
-                          type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                          type="button" id="dropdownMenuButton-${topicId}" data-toggle="dropdown" aria-haspopup="true"
                           aria-expanded="false">
                           Novice
                       </div>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id = '${topicId}'>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-${topicId}" id = '${topicId}'>
                           <a class="dropdown-item" href="#">Novice</a>
                           <a class="dropdown-item" href="#">Intermediate</a>
                           <a class="dropdown-item" href="#">Expert</a>
@@ -41,11 +41,11 @@ export const SearchSection = (props) => {
               <div class="input-group border-bottom">
                   <div class="dropdown">
                       <div class="rounded-top text-white border-bottom dropdown-toggle dropdown-spacing"
-                          type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                          type="button" id="dropdownMenuButton-${sortId}" data-toggle="dropdown" aria-haspopup="true"
                           aria-expanded="false">
                           Most Popular
                       </div>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id='${sortId}'>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-${sortId}" id='${sortId}'>
                           <a class="dropdown-item" href="#">Most Popular</a>
                           <a class="dropdown-item" href="#">Most Recent</a>
                           <a class="dropdown-item" href="#">Most Viewed</a>

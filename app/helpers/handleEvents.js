@@ -25,6 +25,8 @@ const handleChangeTopic = (props) => {
       e.preventDefault();
       const filterValue = e.target.innerText;
       localStorage.setItem('topic', filterValue.toLowerCase());
+      document.getElementById(`dropdownMenuButton-${topicId}`).innerText =
+        filterValue;
 
       const $nodeToUpdate = document.getElementById(courseVideoCarouselId);
       $nodeToUpdate.innerHTML = await CourseVideosCarouselString(props);
@@ -47,6 +49,9 @@ const handleChangeSort = (props) => {
         'sort',
         filterValue.replaceAll(' ', '_').toLowerCase()
       );
+
+      document.getElementById(`dropdownMenuButton-${sortId}`).innerText =
+        filterValue;
 
       const $nodeToUpdate = document.getElementById(courseVideoCarouselId);
       $nodeToUpdate.innerHTML = await CourseVideosCarouselString(props);

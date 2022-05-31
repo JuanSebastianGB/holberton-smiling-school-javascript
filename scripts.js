@@ -1,32 +1,24 @@
-import { API_URL_QUOTES } from './config/index.js';
-import { CarouselItem } from './custom-components/CarouselItem.js';
-import { Loader } from './custom-components/loader/Loader.js';
-import { QuoteSection } from './custom-components/QuoteSection.js';
+import { Footer } from './app/components/Footer.js';
+import { HeaderCourse } from './app/components/HeaderCourse.js';
+import { Router } from './app/components/Router.js';
+import { SearchAndResults } from './app/components/SearchAndResults.js';
+import events from './helpers/handleEvents.js';
 
-const setQuotes = async () => {
-  try {
-    let fetchQuotes = await $.get(API_URL_QUOTES);
-    let counter = 0;
-    let classActive = '';
-    $('body').append(Loader);
-    $('body').append(QuoteSection);
+export const Scripts = async () => {
+  let queryInputId = `q-${Date.now()}`,
+    topicId = `topic-${Date.now()}`,
+    sortId = `sort-${Date.now()}`,
+    courseVideoCarouselId = `courseVideoCarouselId-${Date.now()}`,
+    ids = { queryInputId, topicId, sortId },
+    params = { q: '', topic: 'all', sort: 'most_popular' };
+  const objectToHandleEvents = { ...ids, ...params, courseVideoCarouselId };
+  HeaderCourse();
+  await SearchAndResults({ ...objectToHandleEvents });
+  Footer();
 
-    fetchQuotes.map((element) => {
-      if (counter === 0) {
-        classActive = 'active';
-        counter++;
-      } else classActive = 'another-quote';
-      $('#carouselQuotes .carousel-inner').append(
-        CarouselItem(element, classActive)
-      );
-    });
-    $('.loader').remove();
-  } catch (error) {
-    console.log(error);
-    $('body').append(Loader);
-  }
+  events.handleKeyUp({ ...objectToHandleEvents });
+  events.handleChangeTopic({ ...objectToHandleEvents });
+  events.handleChangeSort({ ...objectToHandleEvents });
+
+  Router();
 };
-
-$('document').ready(function () {
-  setQuotes();
-});

@@ -1,6 +1,7 @@
 import { HeaderCourse } from './HeaderCourse.js';
 import { SearchAndResults } from './SearchAndResults.js';
 import events from '../helpers/handleEvents.js';
+import api from '../helpers/connection_api.js';
 import { Footer } from './Footer.js';
 import { HeaderPrice } from './HeaderPrice.js';
 import { QuotesSectionWithLoader } from './QuotesSectionWithLoader.js';
@@ -17,7 +18,6 @@ export const Router = async () => {
   $root.innerHTML = null;
 
   if (!hash || hash === '#/') {
-    const $root = document.getElementById('root');
     $root.appendChild(Header());
     await QuotesSectionWithLoader({ color: 'white' });
     await TutorialVideosSectionWithLoader({

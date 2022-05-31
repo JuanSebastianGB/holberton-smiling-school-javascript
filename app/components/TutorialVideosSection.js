@@ -9,7 +9,6 @@ export const TutorialVideosSection = async (props) => {
   await ajax({
     url,
     cbSuccess: (tutorials) => {
-      console.log(tutorials);
       const totalTutorials = tutorials.length;
       tutorials.map((tutorial, key) => {
         tutorial['sub_title'] = tutorial['sub-title'];
