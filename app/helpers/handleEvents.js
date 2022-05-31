@@ -10,8 +10,6 @@ const handleKeyUp = (props) => {
 
     const $nodeToUpdate = document.getElementById(courseVideoCarouselId);
     $nodeToUpdate.innerHTML = await CourseVideosCarouselString(props);
-
-    console.log(e.target.value);
   });
 };
 
@@ -30,8 +28,6 @@ const handleChangeTopic = (props) => {
 
       const $nodeToUpdate = document.getElementById(courseVideoCarouselId);
       $nodeToUpdate.innerHTML = await CourseVideosCarouselString(props);
-
-      console.log(e.target.innerText);
     });
   });
 };
@@ -55,8 +51,6 @@ const handleChangeSort = (props) => {
 
       const $nodeToUpdate = document.getElementById(courseVideoCarouselId);
       $nodeToUpdate.innerHTML = await CourseVideosCarouselString(props);
-
-      console.log(e.target.innerText);
     });
   });
 };

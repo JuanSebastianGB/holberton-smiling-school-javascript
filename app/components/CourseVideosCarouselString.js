@@ -12,7 +12,6 @@ export const CourseVideosCarouselString = async (props) => {
       topic: localStorage.topic ? localStorage.topic : 'all',
       sort: localStorage.sort ? localStorage.sort : 'most-popular',
     };
-    console.log('value', data);
     let { courses } = await $.ajax({ url: api.API_URL_COURSES, data });
 
     let html = '';
