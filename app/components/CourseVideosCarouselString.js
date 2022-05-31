@@ -2,18 +2,17 @@ import api from '../helpers/connection_api.js';
 import { CourseCard } from './CourseCard.js';
 
 export const CourseVideosCarouselString = async (props) => {
-  let { q, topic, sort } = props;
   let customId = `${Date.now()}`;
-
   try {
     let data = {
       action: 'query',
       list: 'search',
       format: 'json',
-      q,
-      topic,
-      sort,
+      q: localStorage.q ? localStorage.q : '',
+      topic: localStorage.topic ? localStorage.topic : 'all',
+      sort: localStorage.sort ? localStorage.sort : 'most-popular',
     };
+    console.log('value', data);
     let { courses } = await $.ajax({ url: api.API_URL_COURSES, data });
 
     let html = '';

@@ -1,5 +1,5 @@
 export const SearchSection = (props) => {
-  const { queryInputId } = props;
+  const { queryInputId, topicId, sortId } = props;
   const $search = document.createElement('section'),
     $root = document.getElementById('root');
   $root.appendChild($search);
@@ -27,10 +27,11 @@ export const SearchSection = (props) => {
                           aria-expanded="false">
                           Novice
                       </div>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id = '${topicId}'>
                           <a class="dropdown-item" href="#">Novice</a>
                           <a class="dropdown-item" href="#">Intermediate</a>
                           <a class="dropdown-item" href="#">Expert</a>
+                          <a class="dropdown-item" href="#">All</a>
                       </div>
                   </div>
               </div>
@@ -44,7 +45,7 @@ export const SearchSection = (props) => {
                           aria-expanded="false">
                           Most Popular
                       </div>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id='${sortId}'>
                           <a class="dropdown-item" href="#">Most Popular</a>
                           <a class="dropdown-item" href="#">Most Recent</a>
                           <a class="dropdown-item" href="#">Most Viewed</a>

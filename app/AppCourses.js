@@ -10,13 +10,12 @@ export const AppCourses = async () => {
     courseVideoCarouselId = `courseVideoCarouselId-${Date.now()}`,
     ids = { queryInputId, topicId, sortId },
     params = { q: '', topic: 'all', sort: 'most_popular' };
+  const objectToHandleEvents = { ...ids, ...params, courseVideoCarouselId };
   HeaderCourse();
-  await SearchAndResults({
-    ...ids,
-    ...params,
-    courseVideoCarouselId,
-  });
+  await SearchAndResults({ ...objectToHandleEvents });
   Footer();
 
-  events.handleKeyUp({ queryInputId, ...params, courseVideoCarouselId });
+  events.handleKeyUp({ ...objectToHandleEvents });
+  events.handleChangeTopic({ ...objectToHandleEvents });
+  events.handleChangeSort({ ...objectToHandleEvents });
 };
