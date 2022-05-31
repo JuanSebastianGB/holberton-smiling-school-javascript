@@ -1,5 +1,6 @@
 import { Footer } from './components/Footer.js';
 import { HeaderCourse } from './components/HeaderCourse.js';
+import { Router } from './components/Router.js';
 import { SearchAndResults } from './components/SearchAndResults.js';
 import events from './helpers/handleEvents.js';
 
@@ -18,4 +19,6 @@ export const AppCourses = async () => {
   events.handleKeyUp({ ...objectToHandleEvents });
   events.handleChangeTopic({ ...objectToHandleEvents });
   events.handleChangeSort({ ...objectToHandleEvents });
+
+  Router();
 };

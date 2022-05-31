@@ -19,11 +19,11 @@ export const Navbar = () => {
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav d-flex align-items-center d-block d-sm-none">
       <li class="nav-item">
-          <a class="nav-link text-white text-uppercase font-weight-bold" href="#">courses
+          <a class="nav-link text-white text-uppercase font-weight-bold" href="#/courses">courses
           </a>
       </li>
       <li class="nav-item">
-          <a class="nav-link text-white text-uppercase font-weight-bold" href="#">pricing</a>
+          <a class="nav-link text-white text-uppercase font-weight-bold" href="#/pricing">pricing</a>
       </li>
       <li class="nav-item">
           <a href="#" class="nav-link text-white text-uppercase font-weight-bold">login</a>
@@ -31,11 +31,11 @@ export const Navbar = () => {
   </ul>
   <ul class="navbar-nav  ml-auto d-none d-sm-flex flex-row align-items-end">
       <li class="nav-item">
-          <a class="nav-link text-white text-uppercase font-weight-bold" href="#">courses
+          <a class="nav-link text-white text-uppercase font-weight-bold" href="#/courses">courses
           </a>
       </li>
       <li class="nav-item">
-          <a class="nav-link text-white text-uppercase font-weight-bold" href="#">pricing</a>
+          <a class="nav-link text-white text-uppercase font-weight-bold" href="#/pricing">pricing</a>
       </li>
       <li class="nav-item">
           <a href="#" class="nav-link text-white text-uppercase font-weight-bold">login</a>
