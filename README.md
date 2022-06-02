@@ -1,5 +1,14 @@
 # 0x0F. Build a web app in JavaScript
 
+- In this project is being implemented javascript as SPA (Single Page Application), that means that the application is being loaded in a single page. but still is able to handle all the pages without reload the page. And only manipulating the DOM.
+
+- Actually to look in action only is needed to call any of the html files that inside have the script to scripts.js
+
+- when the page is loaded the user can click in the header section Courses, Pricing or Login and see the magic happen.
+
+Also, for the project requirements, is being implemented xml with fully jquery to manipulate dynamically and interact with the DOM.
+
+
 "0x0B. Implement a design with bootstrap")  and make some parts dynamic with Javascript (JQuery exactly).
 
 You will reuse final files of  [0x0B. Implement a design with bootstrap](https://intranet.hbtn.io/rltoken/oiPG7fxT8IPuYTMm8gbVBw "0x0B. Implement a design with bootstrap")  and update them.
