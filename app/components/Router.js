@@ -8,8 +8,7 @@ export const Router = async () => {
   const $root = document.getElementById('root');
   $root.innerHTML = null;
 
-  console.log(hash);
-  if (hash === '#') {
+  if (!hash || hash === '#/') {
     loads.LoadHome();
   } else if (hash === '#/courses') {
     loads.LoadCourses();
