@@ -30,7 +30,6 @@ const renderQuotes = () => {
 
 const renderTutorials = () => {
   const url = api.xmlTutorials;
-  console.log(url);
   $.ajax({
     url,
     type: 'GET',
@@ -65,7 +64,6 @@ const renderTutorials = () => {
             index,
           })
         );
-        console.log(index);
         if (index < 4)
           $('#carousel-videos-control .carousel-inner .row-active').append(
             $carouselItem
@@ -80,7 +78,56 @@ const renderTutorials = () => {
   });
 };
 
+const renderLatestVideos = () => {
+  const url = api.xmlLatestVideos;
+  $.ajax({
+    url,
+    type: 'GET',
+    dataType: 'xml',
+    beforeSend: function () {
+      $('.loader-tutorials').show();
+    },
+    success: function (response) {
+      const $nodes = $(response).find('video');
+      $nodes.map((index, element) => {
+        let title = $(element).find('title').text(),
+          sub_title = $(element).find('sub-title').text(),
+          pic_url = $(element).find('pic_url').text(),
+          thumb_url = $(element).find('thumb_url').text(),
+          author = $(element).find('author').text(),
+          author_pic_url = $(element).find('author_pic_url').text(),
+          duration = $(element).find('duration').text(),
+          topic = $(element).find('topic').text(),
+          keywords = $(element).find('keywords').text();
+        let $carouselItem = $(
+          TutorialCarouselItem({
+            title,
+            sub_title,
+            pic_url,
+            thumb_url,
+            author,
+            author_pic_url,
+            duration,
+            topic,
+            keywords,
+            index,
+          })
+        );
+        if (index < 4)
+          $(
+            'carousel-latest-videos-control .carousel-inner .row-active'
+          ).append($carouselItem);
+        else
+          $(
+            'carousel-latest-videos-control .carousel-inner .row-not-active'
+          ).append($carouselItem);
+      });
+    },
+  });
+};
+
 export default {
   renderQuotes,
   renderTutorials,
+  renderLatestVideos,
 };
