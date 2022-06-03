@@ -1,6 +1,7 @@
 import { QuoteCarouselItem } from '../components/QuoteCarouselItem.js';
 import { TutorialCarouselItem } from '../components/TutorialCarouselItem.js';
 import api from './endPoints.js';
+import { handleTopic, handleSort, handleInputValue } from './handleEvents.js';
 
 const renderQuotes = () => {
   const url = api.xmlQuotes;
@@ -35,7 +36,7 @@ const renderTutorials = () => {
     type: 'GET',
     dataType: 'xml',
     beforeSend: function () {
-      $('.loader-tutorials').show();
+      $('.loader-popular-videos').show();
     },
     success: function (response) {
       const $nodes = $(response).find('video');
@@ -73,7 +74,7 @@ const renderTutorials = () => {
             $carouselItem
           );
       });
-      $('.loader').hide();
+      $('.loader-popular-videos').hide();
     },
   });
 };
@@ -85,10 +86,11 @@ const renderLatestVideos = () => {
     type: 'GET',
     dataType: 'xml',
     beforeSend: function () {
-      $('.loader-tutorials').show();
+      $('.loader-latest-videos').show();
     },
     success: function (response) {
       const $nodes = $(response).find('video');
+
       $nodes.map((index, element) => {
         let title = $(element).find('title').text(),
           sub_title = $(element).find('sub-title').text(),
@@ -115,13 +117,83 @@ const renderLatestVideos = () => {
         );
         if (index < 4)
           $(
-            'carousel-latest-videos-control .carousel-inner .row-active'
+            '#carousel-latest-videos-control .carousel-inner .row-active'
           ).append($carouselItem);
-        else
+        else if (index >= 4 && $nodes.length > 4)
           $(
-            'carousel-latest-videos-control .carousel-inner .row-not-active'
+            '#carousel-latest-videos-control .carousel-inner .row-not-active'
           ).append($carouselItem);
       });
+      $('.loader-latest-videos').hide();
+    },
+  });
+};
+
+const renderTopicsDropDown = () => {
+  const url = api.xmlCourses;
+  $.ajax({
+    url,
+    type: 'GET',
+    dataType: 'xml',
+    data: {
+      action: 'query',
+      list: 'search',
+      format: 'json',
+    },
+    success: function (response) {
+      const selectedData = $(response).find('topics').find('topic');
+      let html = '';
+      selectedData.map((index, topic) => {
+        html += `<a class="dropdown-item" href="#">${$(topic).text()}</a>`;
+      });
+      $('#dropDownMenuTopics').append(html);
+      handleTopic();
+    },
+  });
+};
+
+const renderSortDropDown = () => {
+  const url = api.xmlCourses;
+  $.ajax({
+    url,
+    type: 'GET',
+    dataType: 'xml',
+    data: {
+      action: 'query',
+      list: 'search',
+      format: 'json',
+    },
+    success: function (response) {
+      console.log(response);
+      const selectedData = $(response).find('sorts').find('sort');
+      let html = '';
+      selectedData.map((index, sort) => {
+        html += `<a class="dropdown-item" href="#">${$(sort)
+          .text()
+          .replace('_', ' ')}</a>`;
+      });
+      $('#dropDownMenuSort').append(html);
+      handleSort();
+    },
+  });
+};
+
+const renderCourses = () => {
+  const url = api.xmlCourses;
+  $.ajax({
+    url,
+    type: 'GET',
+    dataType: 'xml',
+    beforeSend: function () {},
+    data: {
+      action: 'query',
+      list: 'search',
+      format: 'json',
+    },
+    success: function (response) {
+      const selectedData = $(response).find('topics').find('topic');
+
+      selectedData.map((index, course) => {});
     },
   });
 };
@@ -130,4 +202,7 @@ export default {
   renderQuotes,
   renderTutorials,
   renderLatestVideos,
+  renderCourses,
+  renderTopicsDropDown,
+  renderSortDropDown,
 };

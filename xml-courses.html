@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="holberton_school-icon/style.css">
 
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" type='module'></script>
+    <script src="xml-scripts.js" type='module'></script>
 </head>
 
 <body>
@@ -106,14 +106,13 @@
                     <div class="input-group border-bottom">
                         <div class="dropdown">
                             <div class="rounded-top text-white border-bottom dropdown-toggle dropdown-spacing"
-                                type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                type="button" id="dropdownMenuButtonTopics" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 Novice
                             </div>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Novice</a>
-                                <a class="dropdown-item" href="#">Intermediate</a>
-                                <a class="dropdown-item" href="#">Expert</a>
+                            <div class="dropdown-menu" id='dropDownMenuTopics'
+                                aria-labelledby="dropdownMenuButtonTopics">
+
                             </div>
                         </div>
                     </div>
@@ -123,14 +122,12 @@
                     <div class="input-group border-bottom">
                         <div class="dropdown">
                             <div class="rounded-top text-white border-bottom dropdown-toggle dropdown-spacing"
-                                type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                type="button" id="dropdownMenuButtonSort" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
                                 Most Popular
                             </div>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Most Popular</a>
-                                <a class="dropdown-item" href="#">Most Recent</a>
-                                <a class="dropdown-item" href="#">Most Viewed</a>
+                            <div class="dropdown-menu" id="dropDownMenuSort" aria-labelledby="dropdownMenuButtonSort">
+
                             </div>
                         </div>
                     </div>

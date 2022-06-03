@@ -144,6 +144,7 @@
     <section>
         <h2 class="text-center">Most <span class="text-purple">popular</span> tutorials</h2>
         <div id="carousel-videos-control" class="carousel slide" data-ride="carousel">
+            <div class="loader-popular-videos"></div>
             <div class="carousel-inner  mb-5">
                 <div class="carousel-item active activated">
                     <div class="row justify-content-center row-active">
@@ -163,6 +164,7 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+        </div>
     </section>
 
     <!-- Free membership -->
@@ -231,335 +233,18 @@
 
     <!-- Latest Videos -->
     <section>
-        <h2 class="text-center mt-5"> <span class="text-purple">Lates</span> videos</h2>
+        <h2 class="text-center mt-5"> <span class="text-purple">Latest</span> videos</h2>
         <div id="carousel-latest-videos-control" class="carousel slide" data-ride="carousel">
+            <div class="loader-latest-videos"></div>
+
             <div class="carousel-inner mb-5">
-                <div class="carousel-item active">
-                    <div class="row justify-content-center">
-                        <div class="mx-1">
-                            <div class="card video-card-control mx-auto my-3">
-                                <img class="card-img-top" src="images/thumbnail_4.jpg" alt="Thumbnail 4" width="255"
-                                    height="154">
-                                <img class="play-icon-position" src="images/play.png" alt="Play" width="64" height="64">
-                                <div class="card-body">
-                                    <p class="font-weight-bold mt-5">Diagonal Smile<br>
-                                        <span class="text-secondary font-size-14 font-weight-normal">Lorem ipsum dolor
-                                            sit
-                                            amet, consect adipiscing elit, sed do eiusmod.</span>
-                                    </p>
-                                    <div class="row justify-content-start font-size-14 text-purple">
-                                        <div class="col-2">
-                                            <img class="rounded-circle" src="images/profile_1.jpg" width="30"
-                                                height="30" alt="Profile 1" loading="lazy">
-                                        </div>
-                                        <div class="col mt-1">
-                                            Phillip Massey
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-between mt-2">
-                                        <div class="col">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_off.png" width="15" height="15" alt="Star off"
-                                                loading="lazy">
-                                        </div>
-                                        <div class="col-4 text-right text-purple">
-                                            8 min
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mx-1 d-none d-md-flex">
-                            <div class="card video-card-control mx-auto my-3">
-                                <img class="card-img-top" src="images/thumbnail_3.jpg" alt="Thumbnail 3" width="255"
-                                    height="154">
-                                <img class="play-icon-position" src="images/play.png" alt="Play" width="64" height="64">
-                                <div class="card-body">
-                                    <p class="font-weight-bold mt-5">Sad Smile<br>
-                                        <span class="text-secondary font-size-14 font-weight-normal">Lorem ipsum dolor
-                                            sit
-                                            amet, consect adipiscing elit, sed do eiusmod.</span>
-                                    </p>
-                                    <div class="row justify-content-start font-size-14 text-purple">
-                                        <div class="col-2">
-                                            <img class="rounded-circle" src="images/profile_1.jpg" width="30"
-                                                height="30" alt="Profile 1" loading="lazy">
-                                        </div>
-                                        <div class="col mt-1">
-                                            Phillip Massey
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-between mt-2">
-                                        <div class="col">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_off.png" width="15" height="15" alt="Star off"
-                                                loading="lazy">
-                                        </div>
-                                        <div class="col-4 text-right text-purple">
-                                            8 min
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mx-1 d-none d-lg-flex">
-                            <div class="card video-card-control mx-auto my-3">
-                                <img class="card-img-top" src="images/thumbnail_1.jpg" alt="Thumbnail 1" width="255"
-                                    height="154">
-                                <img class="play-icon-position" src="images/play.png" alt="Play" width="64" height="64">
-                                <div class="card-body">
-                                    <p class="font-weight-bold mt-5">Natural Smile<br>
-                                        <span class="text-secondary font-size-14 font-weight-normal">Lorem ipsum dolor
-                                            sit
-                                            amet, consect adipiscing elit, sed do eiusmod.</span>
-                                    </p>
-                                    <div class="row justify-content-start font-size-14 text-purple">
-                                        <div class="col-2">
-                                            <img class="rounded-circle" src="images/profile_1.jpg" width="30"
-                                                height="30" alt="Profile 1" loading="lazy">
-                                        </div>
-                                        <div class="col mt-1">
-                                            Phillip Massey
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-between mt-2">
-                                        <div class="col">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_off.png" width="15" height="15" alt="Star off"
-                                                loading="lazy">
-                                        </div>
-                                        <div class="col-4 text-right text-purple">
-                                            8 min
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mx-1 d-none d-lg-flex">
-                            <div class="card video-card-control mx-auto my-3">
-                                <img class="card-img-top" src="images/thumbnail_2.jpg" alt="Thumbnail 2" width="255"
-                                    height="154">
-                                <img class="play-icon-position" src="images/play.png" alt="Play" width="64" height="64">
-                                <div class="card-body">
-                                    <p class="font-weight-bold mt-5">Happy Smile<br>
-                                        <span class="text-secondary font-size-14 font-weight-normal">Lorem ipsum dolor
-                                            sit
-                                            amet, consect adipiscing elit, sed do eiusmod.</span>
-                                    </p>
-                                    <div class="row justify-content-start font-size-14 text-purple">
-                                        <div class="col-2">
-                                            <img class="rounded-circle" src="images/profile_1.jpg" width="30"
-                                                height="30" alt="Profile 1" loading="lazy">
-                                        </div>
-                                        <div class="col mt-1">
-                                            Phillip Massey
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-between mt-2">
-                                        <div class="col">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_off.png" width="15" height="15" alt="Star off"
-                                                loading="lazy">
-                                        </div>
-                                        <div class="col-4 text-right text-purple">
-                                            8 min
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="carousel-item active activated">
+                    <div class="row justify-content-center row-active">
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        <div class="mx-1">
-                            <div class="card video-card-control mx-auto my-3">
-                                <img class="card-img-top" src="images/thumbnail_1.jpg" alt="Thumbnail 1" width="255"
-                                    height="154">
-                                <img class="play-icon-position" src="images/play.png" alt="Play" width="64" height="64">
-                                <div class="card-body">
-                                    <p class="font-weight-bold mt-5">Natural Smile<br>
-                                        <span class="text-secondary font-size-14 font-weight-normal">Lorem ipsum dolor
-                                            sit
-                                            amet, consect adipiscing elit, sed do eiusmod.</span>
-                                    </p>
-                                    <div class="row justify-content-start font-size-14 text-purple">
-                                        <div class="col-2">
-                                            <img class="rounded-circle" src="images/profile_1.jpg" width="30"
-                                                height="30" alt="Profile 1" loading="lazy">
-                                        </div>
-                                        <div class="col mt-1">
-                                            Phillip Massey
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-between mt-2">
-                                        <div class="col">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_off.png" width="15" height="15" alt="Star off"
-                                                loading="lazy">
-                                        </div>
-                                        <div class="col-4 text-right text-purple">
-                                            8 min
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mx-1 d-none d-md-flex">
-                            <div class="card video-card-control mx-auto my-3">
-                                <img class="card-img-top" src="images/thumbnail_2.jpg" alt="Thumbnail 2" width="255"
-                                    height="154">
-                                <img class="play-icon-position" src="images/play.png" alt="Play" width="64" height="64">
-                                <div class="card-body">
-                                    <p class="font-weight-bold mt-5">Happy Smile<br>
-                                        <span class="text-secondary font-size-14 font-weight-normal">Lorem ipsum dolor
-                                            sit
-                                            amet, consect adipiscing elit, sed do eiusmod.</span>
-                                    </p>
-                                    <div class="row justify-content-start font-size-14 text-purple">
-                                        <div class="col-2">
-                                            <img class="rounded-circle" src="images/profile_1.jpg" width="30"
-                                                height="30" alt="Profile 1" loading="lazy">
-                                        </div>
-                                        <div class="col mt-1">
-                                            Phillip Massey
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-between mt-2">
-                                        <div class="col">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_off.png" width="15" height="15" alt="Star off"
-                                                loading="lazy">
-                                        </div>
-                                        <div class="col-4 text-right text-purple">
-                                            8 min
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mx-1 d-none d-lg-flex">
-                            <div class="card video-card-control mx-auto my-3">
-                                <img class="card-img-top" src="images/thumbnail_4.jpg" alt="Thumbnail 4" width="255"
-                                    height="154">
-                                <img class="play-icon-position" src="images/play.png" alt="Play" width="64" height="64">
-                                <div class="card-body">
-                                    <p class="font-weight-bold mt-5">Diagonal Smile<br>
-                                        <span class="text-secondary font-size-14 font-weight-normal">Lorem ipsum dolor
-                                            sit
-                                            amet, consect adipiscing elit, sed do eiusmod.</span>
-                                    </p>
-                                    <div class="row justify-content-start font-size-14 text-purple">
-                                        <div class="col-2">
-                                            <img class="rounded-circle" src="images/profile_1.jpg" width="30"
-                                                height="30" alt="Profile 1" loading="lazy">
-                                        </div>
-                                        <div class="col mt-1">
-                                            Phillip Massey
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-between mt-2">
-                                        <div class="col">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_off.png" width="15" height="15" alt="Star off"
-                                                loading="lazy">
-                                        </div>
-                                        <div class="col-4 text-right text-purple">
-                                            8 min
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mx-1 d-none d-lg-flex">
-                            <div class="card video-card-control mx-auto my-3">
-                                <img class="card-img-top" src="images/thumbnail_3.jpg" alt="Thumbnail 3" width="255"
-                                    height="154">
-                                <img class="play-icon-position" src="images/play.png" alt="Play" width="64" height="64">
-                                <div class="card-body">
-                                    <p class="font-weight-bold mt-5">Sad Smile<br>
-                                        <span class="text-secondary font-size-14 font-weight-normal">Lorem ipsum dolor
-                                            sit
-                                            amet, consect adipiscing elit, sed do eiusmod.</span>
-                                    </p>
-                                    <div class="row justify-content-start font-size-14 text-purple">
-                                        <div class="col-2">
-                                            <img class="rounded-circle" src="images/profile_1.jpg" width="30"
-                                                height="30" alt="Profile 1" loading="lazy">
-                                        </div>
-                                        <div class="col mt-1">
-                                            Phillip Massey
-                                        </div>
-                                    </div>
-                                    <div class="row justify-content-between mt-2">
-                                        <div class="col">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_on.png" width="15" height="15" alt="Star on"
-                                                loading="lazy">
-                                            <img src="images/star_off.png" width="15" height="15" alt="Star off"
-                                                loading="lazy">
-                                        </div>
-                                        <div class="col-4 text-right text-purple">
-                                            8 min
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="carousel-item not-activated">
+                    <div class="row justify-content-center row-not-active">
+
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carousel-latest-videos-control" role="button" data-slide="prev">
@@ -571,6 +256,7 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+        </div>
     </section>
 
 
