@@ -1,3 +1,4 @@
+import { CourseItem } from '../components/CourseItem.js';
 import { QuoteCarouselItem } from '../components/QuoteCarouselItem.js';
 import { TutorialCarouselItem } from '../components/TutorialCarouselItem.js';
 import api from './endPoints.js';
@@ -179,21 +180,57 @@ const renderSortDropDown = () => {
 };
 
 const renderCourses = () => {
+  $('.results-section .row').empty();
+  $('.results-section .row').html('');
+
   const url = api.xmlCourses;
+  const { search, topic, sort } = localStorage;
   $.ajax({
     url,
     type: 'GET',
     dataType: 'xml',
-    beforeSend: function () {},
+    beforeSend: function () {
+      $('.loader').show();
+    },
     data: {
       action: 'query',
       list: 'search',
       format: 'json',
+      q: search || '',
+      topic: topic || 'intermediate',
+      sort: sort || 'most_popular',
     },
     success: function (response) {
-      const selectedData = $(response).find('topics').find('topic');
-
-      selectedData.map((index, course) => {});
+      const selectedData = $(response).find('courses').find('course');
+      const totalVideos = selectedData.length;
+      $('#totalVideos').text(
+        `${totalVideos} ${totalVideos === 1 ? 'video' : 'videos'}`
+      );
+      let html = '';
+      selectedData.map((index, element) => {
+        let title = $(element).find('title').text(),
+          sub_title = $(element).find('sub-title').text(),
+          pic_url = $(element).find('pic_url').text(),
+          thumb_url = $(element).find('thumb_url').text(),
+          author = $(element).find('author').text(),
+          author_pic_url = $(element).find('author_pic_url').text(),
+          duration = $(element).find('duration').text(),
+          topic = $(element).find('topic').text(),
+          keywords = $(element).find('keywords').text();
+        html += CourseItem({
+          title,
+          sub_title,
+          pic_url,
+          thumb_url,
+          author,
+          author_pic_url,
+          duration,
+          topic,
+          keywords,
+          index,
+        });
+      });
+      $('.results-section .row').append(html);
     },
   });
 };
